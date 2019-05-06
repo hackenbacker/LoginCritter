@@ -31,6 +31,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
         let textField = createTextField(text: "Email")
         textField.keyboardType = .emailAddress
         textField.returnKeyType = .next
+        textField.textContentType = .username
         return textField
     }()
 
@@ -40,6 +41,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.returnKeyType = .go
         textField.rightView = showHidePasswordButton
         showHidePasswordButton.isHidden = true
+        textField.textContentType = .password
         return textField
     }()
 
